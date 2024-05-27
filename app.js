@@ -30,3 +30,15 @@ function mostrar() {
                             Consumo: ${resumen.consumo}`;
 }
 
+function abrirNuevaPagina() {
+    let resumen = {
+        hipotecario: 0,
+        automotriz: 0,
+        consumo: 0
+    };
+    for (let cliente of clientes) {
+        resumen[cliente.tipo]++;
+    }
+    localStorage.setItem('resumen', JSON.stringify(resumen));
+    window.open('resumen.html');
+}

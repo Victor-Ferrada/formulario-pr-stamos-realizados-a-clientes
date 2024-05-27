@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
 </head>
 <body>
-    <form class="form yo" name="formulario" id="formulario" onsubmit="guardar(this)">
-        <h2>Formulario de préstamos</h2>
-        <br>Nombre del cliente:<br>
-        <input type="text" id="Nomcli" name="Nomcli">
-        <br>Tipo de préstamo:<br>
-        <select id="tipo" name="tipo">
+    <form class="form-register" name="formulario" id="formulario" onsubmit="guardar(this)">
+        <h4>Formulario de préstamos</h4>
+        <p>Nombre del cliente:</p>
+        <input class="controls" type="text" id="Nomcli" name="Nomcli" placeholder="Ingrese el nombre del cliente">
+        <p>Tipo de préstamo:</p>
+        <select class="controls" id="tipo" name="tipo">
             <option value="hipotecario">Hipotecario</option>
             <option value="automotriz">Automotriz</option>
             <option value="consumo">Consumo</option>
         </select>
         <br><br>
-        <button type="submit" value="guardar">Guardar</button>
+        <button class="botons" type="submit" value="guardar">Guardar</button>
         <br><br>
-        <input type="button" value="Resumen" onclick="mostrar()">
+        <input class="botons" type="button" value="Resumen" onclick="mostrar()">
+        <br><br>
+        <button class="botons" type="button" values="otrapg" onclick="abrirNuevaPagina()">Pagina nueva</button>
         <br><br>
         <div id="resumen"></div>
         <script>document.getElementById("formulario").addEventListener("submit", function (event) {event.preventDefault()});</script>

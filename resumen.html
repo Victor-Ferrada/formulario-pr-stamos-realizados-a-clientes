@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resumen de Préstamos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-register">
+        <h4>Resumen de Préstamos</h4>
+        <div id="resumen" class="controls"></div>
+    </div>
+    <script>
+        window.onload = function() {
+            let resumen = JSON.parse(localStorage.getItem('resumen'));
+            document.getElementById('resumen').innerHTML = `Hipotecarios: ${resumen.hipotecario}<br>
+                                                            Automotriz: ${resumen.automotriz}<br>
+                                                            Consumo: ${resumen.consumo}`;
+        }
+    </script>
+</body>
+</html>
