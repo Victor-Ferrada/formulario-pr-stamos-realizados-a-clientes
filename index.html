@@ -7,21 +7,23 @@
     <script src="app.js"></script>
 </head>
 <body>
-    <form id="loanForm">
+    <form class="form yo" name="formulario" id="formulario" onsubmit="guardar(this)">
         <h2>Formulario de préstamos</h2>
-        Nombre del cliente:<br>
-        <input type="text" id="clientName" name="clientName">
-        <br>
-        Tipo de préstamo:<br>
-        <select id="loanType" name="loanType">
+        <br>Nombre del cliente:<br>
+        <input type="text" id="Nomcli" name="Nomcli">
+        <br>Tipo de préstamo:<br>
+        <select id="tipo" name="tipo">
             <option value="hipotecario">Hipotecario</option>
             <option value="automotriz">Automotriz</option>
             <option value="consumo">Consumo</option>
         </select>
         <br><br>
-        <input type="button" value="Guardar" onclick="guardar()">
+        <button type="submit" value="guardar">Guardar</button>
         <br><br>
         <input type="button" value="Resumen" onclick="mostrar()">
-    </form> 
+        <br><br>
+        <div id="resumen"></div>
+        <script>document.getElementById("formulario").addEventListener("submit", function (event) {event.preventDefault()});</script>
+    </form>
 </body>
 </html>
