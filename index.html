@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    <form id="loanForm">
+        <h2>Formulario de préstamos</h2>
+        Nombre del cliente:<br>
+        <input type="text" id="clientName" name="clientName">
+        <br>
+        Tipo de préstamo:<br>
+        <select id="loanType" name="loanType">
+            <option value="hipotecario">Hipotecario</option>
+            <option value="automotriz">Automotriz</option>
+            <option value="consumo">Consumo</option>
+        </select>
+        <br><br>
+        <input type="button" value="Guardar" onclick="guardar()">
+        <br><br>
+        <input type="button" value="Resumen" onclick="mostrar()">
+    </form> 
+</body>
+</html>
