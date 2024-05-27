@@ -9,7 +9,7 @@
 </head>
 <body>
     <form class="form-register" name="formulario" id="formulario" onsubmit="guardar(this)">
-        <h4>Formulario de préstamos</h4>
+        <h4>FORMULARIO DE PRÉSTAMOS</h4>
         <p>Nombre del cliente:</p>
         <input class="controls" type="text" id="Nomcli" name="Nomcli" placeholder="Ingrese el nombre del cliente">
         <p>Tipo de préstamo:</p>
@@ -18,13 +18,9 @@
             <option value="automotriz">Automotriz</option>
             <option value="consumo">Consumo</option>
         </select>
-        <br><br>
         <button class="botons" type="submit" value="guardar">Guardar</button>
-        <br><br>
         <input class="botons" type="button" value="Resumen" onclick="mostrar()">
-        <br><br>
         <button class="botons" type="button" values="otrapg" onclick="abrirNuevaPagina()">Pagina nueva</button>
-        <br><br>
         <div id="resumen"></div>
         <script>document.getElementById("formulario").addEventListener("submit", function (event) {event.preventDefault()});</script>
     </form>
